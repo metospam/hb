@@ -10,9 +10,6 @@ import java.util.List;
 
 public class UserDao {
 
-    User user;
-    BillingDetails billingDetails;
-
     public User findUserById(int id) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         var value = session.get(User.class, id);
